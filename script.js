@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const pictures = document.querySelectorAll('.Picture');
+    const pictures = document.querySelectorAll('.picture');
 
     const updateElementPosition = (element, deltaX, deltaY) => {
         const currentTop = parseInt(element.style.top || 0, 10);
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     pictures.forEach(picture => {
-        const range = 111;
+        const range = 80;
         const randomX = Math.random() * (range * 2) - range;
         const randomY = Math.random() * (range * 2) - range;
         const randomRotate = Math.random() * (range / 2) - range / 4;

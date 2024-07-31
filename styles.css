@@ -2,106 +2,141 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400, 600");
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-color: #ffd1dc;
-}
-
-.Gallery-title {
     font-family: 'Caveat', serif;
-    font-size: 6rem;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.Gallery {
-    position: absolute;
+header {
+    background-color: #ffd1dc;
+    text-align: center;
+    padding: 60px 30px 10px;
+    flex: 0 0 auto;
+}
+
+main {
+    background-color: #ffd1dc;
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #ffd1dc;
+    text-align: center;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.gallery-title {
+    font-size: 4rem;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    position: fixed;
     top: 50%;
     left: 50%;
 }
 
-.Picture {
+.picture {
+    background-color: #fff;
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
-    border: 30px solid #fff;
-    border-radius: 5px;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    border: 32px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%);
     user-select: none;
-    cursor: pointer;
+    cursor: grab;
 }
 
-.Picture-img {
+.picture-img {
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 360px;
+    height: 360px;
     pointer-events: none;
 }
 
-.Picture-note {
-    font-family: 'Caveat', serif;
+.picture-note {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-    height: auto;
-    padding: 0.5vw;
-    padding-bottom: 0;
-    font-size: 1.2rem;
     text-align: center;
+    width: 360px;
+    padding: 8px;
+    padding-bottom: 0;
+    height: auto;
+    font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .Gallery-title {
-        font-size: 2em;
+
+@media (max-width: 767px) {
+    footer p {
+        font-size: 0.8rem;
     }
 
-    .Picture {
-        border: 10px solid #fff;
-        border-radius: 3px;
+    .gallery-title {
+        font-size: 1.6rem;
     }
 
-    .Picture-img {
-        width: 30vw;
-        height: auto;
-        max-height: 50vh;
+    .picture {
+        border: 16px solid #fff;
     }
 
-    .Picture-note {
-        width: 30vw;
-        height: auto;
-        padding: 0vw;
-        font-size: 0vw;
+    .picture-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .picture-note {
+        width: 0px;
+        height: 0px;
+        font-size: 0;
+        padding: 0;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
-    .Gallery-title {
-        font-size: 4em;
+@media (min-width: 768px) and (max-width: 1199px) {
+    footer p {
+        font-size: 0.8rem;
     }
 
-    .Picture {
+    .gallery-title {
+        font-size: 2.4rem;
+    }
+
+    .picture {
         border: 20px solid #fff;
-        border-radius: 3px;
     }
 
-    .Picture-img {
-        width: 30vw;
-        height: auto;
-        max-height: 50vh;
+    .picture-img {
+        width: 200px;
+        height: 200px;
     }
 
-    .Picture-note {
-        width: 30vw;
+    .picture-note {
+        width: 200px;
         height: auto;
-        padding: 0.8vw;
+        padding: 4px;
         padding-bottom: 0;
-        font-size: 1em;
+        font-size: 0.8rem;
     }
 }
