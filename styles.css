@@ -42,8 +42,8 @@ footer p {
 }
 
 .gallery-title {
-    font-size: 4rem;
-    color: #333;
+    font-size: 3.0rem;
+    color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
@@ -55,12 +55,12 @@ footer p {
 }
 
 .picture {
-    background-color: #fff;
+    background-color: #f5f5f5;
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
-    border: 32px solid #fff;
+    border: 32px solid #f5f5f5;
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%);
@@ -70,9 +70,17 @@ footer p {
 
 .picture-img {
     display: block;
-    width: 360px;
-    height: 360px;
     pointer-events: none;
+}
+
+.picture-img-h {
+    height: 240px;
+    width: auto;
+}
+
+.picture-img-v {
+    width: 240px;
+    height: auto;
 }
 
 .picture-note {
@@ -80,13 +88,12 @@ footer p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 360px;
+    width: 100%;
     padding: 8px;
     padding-bottom: 0;
     height: auto;
     font-size: 1rem;
 }
-
 
 @media (max-width: 767px) {
     footer p {
@@ -94,16 +101,21 @@ footer p {
     }
 
     .gallery-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .picture {
-        border: 16px solid #fff;
+        border: 16px solid #f5f5f5;
     }
 
-    .picture-img {
-        width: 100px;
-        height: 100px;
+    .picture-img-h {
+        height: 80px;
+        width: auto;
+    }
+    
+    .picture-img-v {
+        width: 80px;
+        height: auto;
     }
 
     .picture-note {
@@ -111,6 +123,11 @@ footer p {
         height: 0px;
         font-size: 0;
         padding: 0;
+    }
+
+    .picture-img {
+        display: block;
+        pointer-events: none;
     }
 }
 
@@ -120,20 +137,25 @@ footer p {
     }
 
     .gallery-title {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .picture {
-        border: 20px solid #fff;
+        border: 20px solid #f5f5f5;
     }
 
-    .picture-img {
-        width: 200px;
-        height: 200px;
+    .picture-img-h {
+        height: 160px;
+        width: auto;
+    }
+    
+    .picture-img-v {
+        width: 160px;
+        height: auto;
     }
 
     .picture-note {
-        width: 200px;
+        width: 100%;
         height: auto;
         padding: 4px;
         padding-bottom: 0;
